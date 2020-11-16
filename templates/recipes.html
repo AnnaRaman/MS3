@@ -16,18 +16,15 @@
     {% endfor %}
 
   <ul class="collapsible">
+  {% for recipe in recipes %}
     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-header white-text amber lighten-2 text-shadow">
+        <i class="fas fa-caret-down">
+        <strong>{{ recipe.name }}</strong></i>
+        </div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+    {% endfor %}
   </ul>
   
 
