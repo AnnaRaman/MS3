@@ -15,11 +15,11 @@
     <!--nav bar----------->
           <nav class="nav-extended text-shadow amber lighten-2">
           <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Recipes</a>
+            <a href="{{ url_for('get_recipes') }}" class="brand-logo">Recipes</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Recipes</a></li>
+                <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                <li><a href="#">My Recipes</a></li>
                  <li><a href="#">Log in</a></li> 
             </ul>
           </div>
@@ -27,8 +27,8 @@
     <!-- mobile side nav-------->
   <ul class="sidenav" id="mobile-demo">
         <li><h4 class="center-align amber-lighten-text text-lighten-2">Recipes</h4></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Recipes</a></li>
+        <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+        <li><a href="#">My Recipes</a></li>
         <li><a href="#">Log in</a></li>
   </ul>
     </header>
