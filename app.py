@@ -26,7 +26,8 @@ def get_recipe():
 
 @app.route("/add_recipe")
 def add_recipe():
-    return render_template("add_recipe.html")
+    difficulty = mongo.db.difficulty.find().sort("difficulty", 1)
+    return render_template("add_recipe.html", difficulty=difficulty)
 
 
 if __name__ == "__main__":
