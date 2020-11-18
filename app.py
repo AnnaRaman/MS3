@@ -24,7 +24,7 @@ def get_recipe():
     return render_template("recipes.html", recipe=recipe)
 
 
-@app.route("/add_recipe", method["GET", "POST"])
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
         recipe = {
@@ -52,13 +52,13 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.recipe.find_one({"_id":ObjectId()})
     difficulty = mongo.db.difficulty.find().sort("difficulty", 1)
-    return render_template("edit_recipe.html", recipe=recipe difficulty=difficulty)
+    return render_template("edit_recipe.html", recipe=recipe, difficulty=difficulty)
 
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipe.remove({"_id": ObjectId()})
-    flash("Task Successfully Deleted!")
+    flash("Recipe Successfully Deleted!")
     return redirect(url_for("get_recipe"))
 
 if __name__ == "__main__":
