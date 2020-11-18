@@ -24,8 +24,18 @@ def get_recipe():
     return render_template("recipes.html", recipe=recipe)
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", method["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "difficulty": request.form.get("difficulty"),
+            "name": request.form.get("name"),
+            "description": request.form.get("description")
+        }
+        mongo.db.recipe.insert_one(recipe)
+        flash("Recipe successfully added!")
+        return redirect(url_for("get_recipe"))
+
     difficulty = mongo.db.difficulty.find().sort("difficulty", 1)
     return render_template("add_recipe.html", difficulty=difficulty)
 
