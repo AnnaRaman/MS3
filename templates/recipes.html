@@ -22,7 +22,7 @@
         <div class="col s3">
             <i class="fas fa-caret-down"></i>
             <a class="waves-effect waves-light btn-small amber">Done</a>
-            <a class="waves-effect waves-light btn-small amber lighten-2">Edit</a>
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe.recipe_id) }}"class="waves-effect waves-light btn-small amber lighten-2">Edit</a>
         </div>    
         <div class="col s9"><strong>{{ recipe.name }}</strong> - {{ recipe.cuisine }}
         </div>

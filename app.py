@@ -39,7 +39,12 @@ def add_recipe():
     difficulty = mongo.db.difficulty.find().sort("difficulty", 1)
     return render_template("add_recipe.html", difficulty=difficulty)
 
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    task = mongo.db.recipe.find_one({"_id":ObjectId()})
 
+    difficulty = mongo.db.difficulty.find().sort("difficulty", 1)
+    return render_template("edit_recipe.html", task=task difficulty=difficulty)
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
