@@ -49,10 +49,17 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipe.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated!")
-        
+
     recipe = mongo.db.recipe.find_one({"_id":ObjectId()})
     difficulty = mongo.db.difficulty.find().sort("difficulty", 1)
     return render_template("edit_recipe.html", recipe=recipe difficulty=difficulty)
+
+
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipe.remove({"_id": ObjectId()})
+    flash("Task Successfully Deleted!")
+    return redirect(url_for("get_recipe"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
