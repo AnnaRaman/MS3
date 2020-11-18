@@ -1,19 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>I'm extending the base template!</h2>
-
-
-    {% for recipe in recipes %}
-        {{ recipe.name }}<br>
-        {{ recipe.description }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.method }}<br>
-        {{ recipe.servings }}<br>
-        {{ recipe.cuisine }}<br>
-        {{ recipe.cooktime}}<br>
-        {{ recipe.author }}
-    {% endfor %} 
+    <h3>All Recipes</h3>
 
   <ul class="collapsible">
   {% for recipe in recipes %}

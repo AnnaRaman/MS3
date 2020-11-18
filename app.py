@@ -33,7 +33,7 @@ def add_recipe():
             "description": request.form.get("description")
         }
         mongo.db.recipe.insert_one(recipe)
-        flash("Recipe successfully added!")
+        flash("Recipe Successfully Added!")
         return redirect(url_for("get_recipe"))
 
     difficulty = mongo.db.difficulty.find().sort("difficulty", 1)
@@ -41,10 +41,19 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    task = mongo.db.recipe.find_one({"_id":ObjectId()})
-
+    if request.method == "POST":
+        submit = {
+            "difficulty": request.form.get("difficulty"),
+            "name": request.form.get("name"),
+            "description": request.form.get("description")
+        }
+        mongo.db.recipe.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Recipe Successfully Updated!")
+        
+    recipe = mongo.db.recipe.find_one({"_id":ObjectId()})
     difficulty = mongo.db.difficulty.find().sort("difficulty", 1)
-    return render_template("edit_recipe.html", task=task difficulty=difficulty)
+    return render_template("edit_recipe.html", recipe=recipe difficulty=difficulty)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
