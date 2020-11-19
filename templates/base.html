@@ -21,7 +21,7 @@
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
                 <li><a href="#">My Recipes</a></li>
-                <li><a href="#">Log in</a></li>
+                <li><a href="{{ url_for('login') }}">Log in</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
             </ul>
           </div>
@@ -31,7 +31,7 @@
         <li><h4 class="center-align amber-lighten-text text-lighten-2">Recipes</h4></li>
         <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
         <li><a href="">My Recipes</a></li>
-        <li><a href="#">Log in</a></li>
+        <li><a href="{{ url_for('login') }}">Log in</a></li>
         <li><a href="{{ url_for('register') }}">Register</a></li>
   </ul>
     </header>
