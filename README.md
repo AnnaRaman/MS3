@@ -28,7 +28,7 @@ My focus with the design was to facilitate the users search for what they are lo
 
 I chose a yellow colour scheme as it known to represent food attributes, and seem appealing to the user. I chose the particular shades of colour from Materialize's colours.
 
-* Images / Animation
+
 
 
 
@@ -47,11 +47,11 @@ These can be found in the folder wireframes.
 -   User registration
 
 
--   Form
+-   Forms
 
 
 Features Left to Implement
-In order to improve the site’s potential, I would like to add an API and fetch data that corresponds to the calories/abv of the cocktails. However, I could not find an API that would do so.
+In order to improve the site’s potential, I would like to add an API and fetch data so that theres already is a substantial amount of data to faciliate the demonstration of the apps features.
 
 ### TECHNOLOGIES
 
@@ -84,30 +84,20 @@ In order to improve the site’s potential, I would like to add an API and fetch
 
 - Responsive
 
-The only errors airsing from the JS tetsing indicate that i am using ES6, however i have chosen es6 as it improves my code.
 
-My version control relied on creating duplicates locally on my hard-drive. Unfortunately, I was unable to use git. I thought the only way to control my versions was by using GitPod. However, was unable to access GitPod so I relied Visual Studio Code. In my attempt to use version control via Visual Studio Code the terminal returned an error stating that an origin already exists for this repository. Despite numerous searching around the internet to fix this bug, I was unable to do so. Therefore, I had no choice but to create duplicates locally whenever significant changes where made.
 
 1.	As someone who is looking to explore more recipes, I’d like to be able to browse a catalogue of different recipes and obtain information about the recipe such as the ingredients, difficulty and serving.
-    - The layout of the cocktails on the cards allows the user to dynamically interact with the drinks that are presented on the cards. Due to the number of cocktails on the page, there is an overlay on the drinks section, to ***
-
+    -  The list of recipes is viewable to all users whether they have an account or not
 
 2.	As someone looking to organise my recipes, I would like to be able to store my recipes in one place so that I can view, edit and delete them easily in my own account.
-    - The hover-over effect allows the user to learn more about the cocktail that they choose, rather than being overwhelmed with information about every cocktail on the site. The front of each card provides the name and picture of the drink, while the back details the ingredients, method and rating. 
+    - The adding recipe operator is fully functioning. Th edit and delete funcions are partly functioning. It is possible to make edits in the input fields however the submit button is not working, like with the function of deleting a recipe.
 
 3.	As an inexperienced cook I’d like to be able to search for different recipes.
-     - The search function allows the user to search in-depth to discover a cocktail that they like. If there nothing matches their search, they will be notified. If for example the user wanted to search for a cocktail by name but wasn’t sure of the spelling, the X function, makes the search easier and makes it more likely for them to find the cocktail that they are looking for. If the user doesn’t know what they are looking for, the lucky dip function randomly selects a cocktail from the array to provide some inspiration for the user.  
 
 
 The testing process intended to ensure that website was fulfilling the needs of the user. After running through the entire website checking links, anchors, the search bar (for positive and negative results), the random generator, website compatibility and responsiveness, it is deducible that it functions as intended. The user stories mentioned in the UX section have been tested and proven success. All data fetched from the data has been received and presented as intended.
 
-1.	Search bar
-     2. Type in a search that does not match an item in the array, you are presented with a message informing that there were no results matching the values entered. 
-     3. Start typing some letters into the search bar, and every matching result with the same values will be presented, as well of the number of matches that are returned. 
-
-All links provided on the website have been coded with 'target="_blank"' so that the user can maintain their position on the website, whilst exploring the link's destination in a new tab. These have been tested and proven to work efficiently. The anchor tags surrounding the 'home', 'drinks', ‘lucky dip' and ‘links’, are fully functioning and allow the user to skip to their desired section. 
-
-With thanks to Flexbox’s framework, the website has been tested and is successfully responsive to different screen sizes, and the elements on the page wrap accordingly and appropriately. The tested mobile devices were iPhone model 5 through to iPhone 8, Galaxy S5, pixel and pixel XL. 
+The elements on the page wrap accordingly and appropriately. The tested mobile devices were iPhone model 5 through to iPhone 8, Galaxy S5, pixel and pixel XL. 
 
 
 ### DEPLOYMENT
@@ -146,15 +136,5 @@ Cloning the Repo
 ### CREDITS
 
 #### Code
-- The random generator card was inspired by this <a href="https://codepen.io/jorchie/pen/PLxaXK">codepen</a>
-- The button for the random generator was initially inspired by this <a href="https://codepen.io/JoeHastings/pen/MwoOeW">codepen</a>
-- The useful links page design was inspired by this <a href="https://codepen.io/sincamons/pen/BNZZbg?editors=0110">codepen</a>
-#### Content
-
-The content on all of the cards is data fetched from this <a href="">API</a>
-
-#### Media
-- The animations used on the name 'in the mix.' was taken from <a href="https://animate.style/">animate.css</a>
-- The GIF on the intial card of the random cocktial generator is from  a <a href="https://in.pinterest.com/pin/129408189279318218/">pintrest pin</a>
-- The balls animation in the background was inspired by 
-a <a href="https://codepen.io/nashvail/details/wpGgXO">Codepen</a>
+- The structure and layout of the code was inspired by that of the code institute mini project.
+- The forms and buttons used were templates supplied by Materialize CSS

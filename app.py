@@ -135,11 +135,14 @@ def edit_recipe(recipe_id):
             "difficulty": request.form.get("difficulty"),
             "author": request.form.get("author")
         }
+        
+        print(submit)
+
         mongo.db.recipe.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated!")
 
     recipe = mongo.db.recipe.find_one({"_id": ObjectId()})
-    difficulty = mongo.db.difficulty.find().sort("difficulty", 1)
+    
     return render_template("edit_recipe.html", recipe=recipe)
 
 

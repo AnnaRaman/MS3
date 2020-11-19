@@ -1,31 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-
-    <h3>All Recipes</h3>
-
-  <ul class="collapsible">
-  {% for recipe in recipes %}
-    <li>
+<h3>All Recipes</h3>
+<ul class="collapsible">
+   {% for recipe in recipes %}
+   <li>
       <div class="collapsible-header white-text amber lighten-2 text-shadow">
-        <div class="col s3">
+         <div class="col s3">
             <i class="fas fa-caret-down"></i>
-          
-            <a href="" class="waves-effect waves-light btn-small yellow lighten-1"> Edit </a>
-            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn-small amber darken-4">Delete</a>
-         
-        </div>    
-        <div class="col s9"><strong>{{ recipe.name }}</strong> - {{ recipe.cuisine }}
-        </div>
-        </div>
-      <div class="collapsible-body">
-        <strong>{{ recipe.description }}</strong>
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn-small yellow lighten-1"> Edit </a>
+            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn-small amber darken-4">Delete</a>
+         </div>
+         <div class="col s9"><strong>{{ recipe.name }}</strong> - {{ recipe.cuisine }}
+         </div>
       </div>
-    </li>
-    {% endfor %}
-  </ul>
-  
-
-
-<!--no results found-->
-
+      <div class="collapsible-body">
+         <strong>{{ recipe.description }}</strong>
+      </div>
+   </li>
+   {% endfor %}
+</ul>
 {% endblock %}
