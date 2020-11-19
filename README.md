@@ -1,9 +1,9 @@
 # Anna Raman – in the mix.
-**Milestone Project 2: Interactive Frontend Development – Code Institute**
+**Milestone Project 3: Data-CentricFrontend Development – Code Institute**
 
-live: 
+live: https://github.com/AnnaRaman/MS3.git
 
-My web application presents a library of recipes, which can be viewed by all users, whether they have made an account or not. The user has the option to make an account, and if they do they are able to create, read, update and delete recipes on the website that they have control over. These recipes can be viewed in the ‘my recipes’ page. The user can search for recipes to view, but will not be able to edit or delete another users recipe. 
+My web application presents a library of recipes, which can be viewed by all users, whether they have made an account or not. The user has the option to make an account and if they do, they are able to create, read, update and delete recipes on the website that they have control over. These recipes can be viewed in the ‘my recipes’ page. The user can search for recipes to view, but will not be able to edit or delete another users recipe. 
 
 ### USER EXPERIENCE (UX)
 #### User Stories
@@ -19,17 +19,15 @@ My web application presents a library of recipes, which can be viewed by all use
 #### Design
 * Layout Design
 
-My focus with the design was to facilitate the users search for what they are looking for; hence, the option to search by name, ingredient, or type of cocktail. The range of possible search queries allows the user not only to find a particular cocktail that they desire, but it also allows them to find a cocktail based on their individual preferences. 
-The overall design layout was inspired by <a href="https://www.mikiyakobayashi.com/">Mikiya Kobayashi</a>’s website as I found it most appealing to visit, due to the minimalist yet engaging design. I used flex throughout the code to maintain responsiveness. I used REM and EM rather than pixels to further promote responsiveness.
+My focus with the design was to facilitate the users search for what they are looking for; a simplistic layout with clear navigation. The search function allows the user to find a recipe which best suits their preferences from the . The inspiration for the layout design was inspired by the Code Institute mini project, aided by the materialize framework, which also ensures that the website is responsive on different screen sizes. I used REM rather than pixels to further promote responsiveness.
 
 
 * Colour scheme / Typography
 
-I chose a Triadic colour scheme in the hope of creating bright bold appearance, whilst choosing pastel colours to balance the dramatic effect, “to create a diverse yet balanced scheme” as described by <a href="https://webflow.com/blog/web-design-101-color-theory">Webflow</a>. I chose the particular shades of colours with the help of <a href="https://coolors.co/">Coolors</a>. Typography
+I chose a yellow colour scheme as it known to represent food attributes, and seem appealing to the user. I chose the particular shades of colour from Materialize's colours.
 
 * Images / Animation
 
-Rather than changing the API images, I thought it best to minimise the code, and make it as clean and readable as possible. So, I chose to use animations, and GIFs as I felt they are more in line with the friendly, fun theme that is running throughout the site. I chose to use the moving balls animation, as I felt they appropriately signified the bubbles in many drinks and cocktails, drawing the user in. 
 
 
 
@@ -40,48 +38,62 @@ These can be found in the folder wireframes.
  <a href="https://github.com/AnnaRaman/Cocktaill-api-milestone2/blob/be656a1f1dd5e6eb61281307e95d1f358cdc47ad/assets/wireframes/Drinks%20Page.jpeg">Drinks</a>
 
 ### FEATURES
-•	Responsive on all device sizes
+
+-	Responsive on all device sizes
 
 
-•	Interactive elements
+-   User registration
+
+
+-   Form
+
 
 Features Left to Implement
 In order to improve the site’s potential, I would like to add an API and fetch data that corresponds to the calories/abv of the cocktails. However, I could not find an API that would do so.
 
 ### TECHNOLOGIES
+
 - Languages
 1.	HTML5
 2.	CSS
 3.	JavaScript
 4.	Python
+
+
 - Frameworks/libraries
 4.	Flask 1.1.2
 5.	Materialize CSS 1.0.0
 6.	jQuery 3.5.1
-7.	Google fonts
-8.	Font awesome
+7.  Jinja2
+8.	Google fonts
+9.	Font awesome
 
 
 
 ### TESTING
+
+#####Validation
+
 - HTML validator <a href="https://validator.w3.org/">W3 Markup validator</a>
 
 - CSS Validator:  <a href="https://jigsaw.w3.org/css-validator/">jigsaw W3</a>
 
-- JS validator: <a href="http://beautifytools.com/javascript-validator.php">beautify tools</a>
+- Python validator: <a>PEP8</a>
 
-The only errors airsing from the JS tetsing indicate that i am using ES6, however i have chosen to es6 as it improves my code.
+- Responsive
+
+The only errors airsing from the JS tetsing indicate that i am using ES6, however i have chosen es6 as it improves my code.
 
 My version control relied on creating duplicates locally on my hard-drive. Unfortunately, I was unable to use git. I thought the only way to control my versions was by using GitPod. However, was unable to access GitPod so I relied Visual Studio Code. In my attempt to use version control via Visual Studio Code the terminal returned an error stating that an origin already exists for this repository. Despite numerous searching around the internet to fix this bug, I was unable to do so. Therefore, I had no choice but to create duplicates locally whenever significant changes where made.
 
-1.	As someone who regularly enjoys making cocktails, I’d like to broaden my scope of drinks to make. So, I would like there to be a well -presented range of drinks, easily viewable and navigable.
+1.	As someone who is looking to explore more recipes, I’d like to be able to browse a catalogue of different recipes and obtain information about the recipe such as the ingredients, difficulty and serving.
     - The layout of the cocktails on the cards allows the user to dynamically interact with the drinks that are presented on the cards. Due to the number of cocktails on the page, there is an overlay on the drinks section, to ***
 
 
-2.	As someone who rarely makes cocktails, rather buys them, I’d like to know how to make some of my favourite cocktails at home. So, I would like to get an appropriate amount of information regarding the ingredients, quantity and direction.
+2.	As someone looking to organise my recipes, I would like to be able to store my recipes in one place so that I can view, edit and delete them easily in my own account.
     - The hover-over effect allows the user to learn more about the cocktail that they choose, rather than being overwhelmed with information about every cocktail on the site. The front of each card provides the name and picture of the drink, while the back details the ingredients, method and rating. 
 
-3.	As an infrequent drinker, I’m curious to find a cocktail that would be to my taste. So, I would like there to be a sufficient search function that allows me to browse the cocktails meticulously, or a function that suggests a cocktail for me.
+3.	As an inexperienced cook I’d like to be able to search for different recipes.
      - The search function allows the user to search in-depth to discover a cocktail that they like. If there nothing matches their search, they will be notified. If for example the user wanted to search for a cocktail by name but wasn’t sure of the spelling, the X function, makes the search easier and makes it more likely for them to find the cocktail that they are looking for. If the user doesn’t know what they are looking for, the lucky dip function randomly selects a cocktail from the array to provide some inspiration for the user.  
 
 
@@ -97,40 +109,36 @@ With thanks to Flexbox’s framework, the website has been tested and is success
 
 
 ### DEPLOYMENT
-This project has been deployed from the master branch to the hosting platform, GitPages. To run locally, copy the following link into an editor: https://github.com/AnnaRaman/milestone2.git.
-Deployment
+This project has been deployed from the master branch to the hosting platform, Heroku. To run locally, copy the following link into an editor: https://github.com/AnnaRaman/MS3.git The project was deployed to Heroku using the following steps:Deployment
 GitHub Pages
-The project was deployed to GitHub Pages using the following steps:
-1.	Log in to GitHub and locate the GitHub Repository
-2.	At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-3.	Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4.	Under "Source", click the dropdown called "None" and select "Master Branch".
-5.	The page will automatically refresh.
-6.	Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
-Forking the GitHub Repository
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps:
+The project was deployed to Heroku Pages using the following steps:
 
-    1.	Log in to GitHub and locate the GitHub Repository
-    2.	At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-    3.	You should now have a copy of the original repository in your GitHub account.
+1.	Log into Heroku, and once logged in on your dashboard, create a new app 
+2.	Make sure your github profile is displayed then add your repository name.
+3.	Click search and once it finds your repository, click to connect the app.
+4.	Click on the settings tab for your app and click on ‘reveal config vars’ where you can securely tell Heroku which variables are required to run the app. 
+5.	The env.py file contains a different variables in our app. The first variable is IP, with the value “0.0.0.0”. Next the PORT which is “5000” copy these into Heroku config vars. For the secret key, copy that from the env.py file then past it into Heroku. 
+6.	Enter the MONGO_DBNAME which is the name of our database.
+7.	Go back to the Deploy tab, but before connecting, make sure to push all new files to the repository.
+8.	Back within the terminal type Git status just confirm that those are our only pending changes, then add, commit and push these files to send them to GitHub.
+9.	Go back to Heroku and select ‘Enable automatic deployment’
+10.	Click ‘deploy branch’ 
+11.	Heroku will now receive the code from GitHub, and start building the app using our required packages.
+12.	Click ‘view’ to launch the app.
 
 
-Making a Local Clone
+
+Cloning the Repo
+
 1.	Log in to GitHub and locate the GitHub Repository
 2.	Under the repository name, click "Clone or download".
 3.	To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4.	Open Git Bash
 5.	Change the current working directory to the location where you want the cloned directory to be made.
 6.	Type git clone, and then paste the URL you copied in Step 3.
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+    $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 7.	Press Enter. Your local clone will be created.
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-Click Here to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
 
 
 ### CREDITS
