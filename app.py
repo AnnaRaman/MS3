@@ -104,9 +104,15 @@ def logout():
 def add_recipe():
     if request.method == "POST":
         recipe = {
-            "difficulty": request.form.get("difficulty"),
             "name": request.form.get("name"),
-            "description": request.form.get("description")
+            "description": request.form.get("description"),
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+            "servings": request.form.get("servings"),
+            "cuisine": request.form.get("cuisine"),
+            "cook_time": request.form.get("cook_time"),
+            "difficulty": request.form.getlist("difficulty"),
+            "author": request.form.get("author")
         }
         mongo.db.recipe.insert_one(recipe)
         flash("Recipe Successfully Added!")
@@ -119,14 +125,20 @@ def add_recipe():
 def edit_recipe(recipe_id):
     if request.method == "POST":
         submit = {
-            "difficulty": request.form.get("difficulty"),
             "name": request.form.get("name"),
-            "description": request.form.get("description")
+            "description": request.form.get("description"),
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+            "servings": request.form.get("servings"),
+            "cuisine": request.form.get("cuisine"),
+            "cook_time": request.form.get("cook_time"),
+            "difficulty": request.form.get("difficulty"),
+            "author": request.form.get("author")
         }
         mongo.db.recipe.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated!")
 
-    recipe = mongo.db.recipe.find_one({"_id":ObjectId()})
+    recipe = mongo.db.recipe.find_one({"_id": ObjectId()})
     difficulty = mongo.db.difficulty.find().sort("difficulty", 1)
     return render_template("edit_recipe.html", recipe=recipe, difficulty=difficulty)
 
