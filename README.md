@@ -35,9 +35,11 @@ I chose a yellow colour scheme as it known to represent food attributes, and see
 
 #### Wireframes
 
-These can be found in the folder wireframes. 
-(assets/wireframes)
- <a href="https://github.com/AnnaRaman/Cocktaill-api-milestone2/blob/be656a1f1dd5e6eb61281307e95d1f358cdc47ad/assets/wireframes/Drinks%20Page.jpeg">Drinks</a>
+https://wireframe.cc/pro/pp/6c55400ea393562 - home not logged in
+
+https://wireframe.cc/pro/pp/7d116f633393557 - home logged in
+
+https://wireframe.cc/pro/pp/5b9429d2f393609 - my receipes
 
 ### FEATURES
 
