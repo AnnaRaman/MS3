@@ -11,7 +11,9 @@ My web application presents a library of recipes, which can be viewed by all use
 
 1.	As someone who is looking to explore more recipes, I’d like to be able to browse a catalogue of different recipes and obtain information about the recipe such as the ingredients, difficulty and serving.
 
-2.	As someone looking to organise my recipes, I would like to be able to store my recipes in one place so that I can view, edit and delete them easily in my own account.
+2.	As someone looking to organise my recipes, I would like to be able to make an account.
+
+3.  As a user i would like to store my recipes in one place so that I can view, edit and delete them easily in my own account.
 
 3.	As an inexperienced cook I’d like to be able to search for different recipes.
 
