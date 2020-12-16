@@ -1,5 +1,4 @@
-# Anna Raman – in the mix.
-**Milestone Project 3: Data-CentricFrontend Development – Code Institute**
+# Anna Raman – recipebbook
 
 live: https://github.com/AnnaRaman/MS3.git
 
