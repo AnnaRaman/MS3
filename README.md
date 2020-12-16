@@ -1,4 +1,4 @@
-# Anna Raman – recipebbook
+# Anna Raman – RecipeBook
 
 live: https://github.com/AnnaRaman/MS3.git
 
